@@ -1,7 +1,9 @@
 (ns datomic-tutorial.core
   (:require [datomic.api :as d]))
 
-(def db-url "datomic:free://127.0.0.1:4334/datomic-tutorial")
+(def db-url "datomic:mem://tutorial")
+
+(d/create-database db-url)
 
 (def schema [{:db/doc "The username."
               :db/id #db/id[:db.part/db]
