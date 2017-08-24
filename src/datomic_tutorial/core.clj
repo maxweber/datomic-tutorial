@@ -80,6 +80,9 @@
          [?e :user/name "ftravers"]]
        db))
 
-(query1 (-> db-url d/connect d/db))
+(defn example-1
+  []
+  (reload-dbs)
+  (query1 (-> db-url d/connect d/db)))
 
 
